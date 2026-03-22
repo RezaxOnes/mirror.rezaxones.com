@@ -1,0 +1,47 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+ * {
+   font-family: "Roboto", sans-serif;
+   background-color: #9eaeca;
+ }
+
+
+
+.box-1 {
+   position: static;
+   top: 0;
+   z-index: 1;
+   border:2px solid #f3efef;
+   padding: 10px;
+}
+
+.incenter {
+   position: relative;
+   text-transform: capitalize;
+   text-align: center;
+   margin: auto;
+}
+
+.normal_h2-h3 {
+   color: #2b4c7e;
+   position: relative;
+   text-transform: capitalize;
+   text-align: center;
+}
+
+.myEmail {
+   position: absolute;
+   color: #FFFFFF;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);  
+   padding:10px;
+   font-size: 25px;
+}
+
+.email-container {
+  position: relative;
+  width: auto;
+  height: auto;
+}

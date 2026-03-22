@@ -1,0 +1,42 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
+
+* {
+    position: relative;
+    font-family: "Roboto", sans-serif;
+    background-color: #0d1117;
+    color: #d3ddeb;
+    margin: auto;
+    width: 1000px;
+    height: 200px;
+}
+
+.table-border{
+   position: relative;
+   text-transform: none;
+   text-align: center;
+   margin: auto;
+   border-collapse: collapse;
+   border:2px solid #f3efef;
+}
+
+.table-border th {
+   position: relative;
+   border:2px solid #f3efef;
+}
+
+.table-border td {
+   position: relative;
+   border:2px solid #f3efef;
+}
+
+.table-border tr {
+   position: relative;
+   border:2px solid #f3efef;
+}
+
+#onlyh3center {
+   position: relative;
+   text-transform: capitalize;
+   text-align: center;
+}
