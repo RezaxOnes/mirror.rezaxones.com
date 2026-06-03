@@ -1,0 +1,2 @@
+https://<searchengine>/indexnow?url=http://www.example.com/product.html&key=5e27c07b404147a384fd4fb0dfa09498&keyLocation=http://www.example.com/myIndexNowKey63638.txt
+https://bing.com/indexnow?url=https://rezaxones.com&key=5e27c07b404147a384fd4fb0dfa09498&keyLocation=https://rezaxones.com/5e27c07b404147a384fd4fb0dfa09498.txt

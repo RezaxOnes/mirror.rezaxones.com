@@ -1,0 +1,5 @@
+import { mysql } from '../../index.test.js';
+
+const BLOB: number = mysql.Types.BLOB;
+const DECIMAL: string = mysql.Types[0x00];
+const DOUBLE: string = mysql.Types[5];

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+    <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <link href="https://rezaxones.com/style/sign-up.css" rel='stylesheet' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://rezaxones.com/storage/rezaxones_icon.png" rel="icon" type="image/png" />
+    <!--Open Graph-->
+    <meta property="og:url" content="https://rezaxones.com" />
+    <meta property="og:title" content="RezaxOnes" />
+    <meta property="og:description" content="Trang chủ của website rezaxones.com" />
+    <meta property="og:image" content="https://rezaxones.com/storage/rezaxones_image.png" />
+    <!---->
+</head>
+
+<body>
+    <h1>Sign Up</h2>
+        <br />
+        <form id="signUpForm" autocomplete="off">
+            <label for="your-user">Username</label>
+            <br />
+            <input type="text" id="your-user" name="username" />
+            <br />
+            <label for="your-pass">Password</label>
+            <br />
+           <div class="password-box">
+           <input type="password" id="your-pass" name="password" />
+           <span id="togglePass"><i class="fa-solid fa-eye"></i></span>
+           </div>
+            <br /><br />
+            <label for="your-FavourLang">Which language do you favour</label>
+            <br />
+            <select id="your-FavourLang" name="language">
+                <option value="None" selected>Không Có</option>
+                <option value="C">Ngôn Ngữ C</option>
+                <option value="C++">Ngôn Ngữ C++</option>
+                <option value="JS">Ngôn Ngữ JS</option>
+                <option value="PHP">Ngôn Ngữ PHP</option>
+                <option value="Python">Ngôn Ngữ Python</option>
+                <option value="Rust">Ngôn ngữ Rust</option>
+                <option value="Lua">Ngôn ngữ Lua</option>
+            </select>
+            <br /><br />
+            <input type="submit" value="Gửi" />
+        </form>
+    <script src="https://rezaxones.com/script/signUpLogic.js"></script>
+</body>
+
+</html>

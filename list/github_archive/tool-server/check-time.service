@@ -1,0 +1,11 @@
+[Unit]
+Description=Check time level
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/time-shutdownAT.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target

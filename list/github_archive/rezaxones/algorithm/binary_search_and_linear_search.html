@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <title>Binary Search And Linear Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://rezaxones.com/storage/rezaxones_icon.png" rel="icon" type="image/png" />
+    <!--Open Graph-->
+    <meta property="og:url" content="https://rezaxones.com" />
+    <meta property="og:title" content="RezaxOnes" />
+    <meta property="og:description" content="Trang chủ của website rezaxones.com" />
+    <meta property="og:image" content="https://rezaxones.com/storage/rezaxones_image.png" />
+    <!---->
+    <!--API-->
+    <link href="https://rezaxones.com/style/algorithm.css" rel='stylesheet' />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" rel='stylesheet' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!---->
+</head>
+
+<body>
+    <div class="white">
+        <h1 class="incenter">Linear Search (Thuật toán tìm kiếm tuyết tính) Và Binary Search (Thuật toán tìm kiếm nhị
+            phân)</h1>
+        <h2 class="bold_text">1. Linear Search</h2>
+        <h3 class="bold_text">a. Khái niệm</h3>
+        <p>- Thuật toán tìm kiếm tuyến tính là duyệt tuần tự từng phần tử trong mảng rồi so sánh
+            giá trị tìm kiếm với từng phần tử trong mảng.
+        </p>
+        <p>
+            - Đặc điểm của thuật toán Linear Search:
+        </p>
+        <ul>
+            <li>Có thể tìm kiếm ngay cả khi mảng chưa được sắp xếp.</li>
+            <li>Thuật toán mạnh hơn Binary Search trong việc tìm kiếm trong mảng chưa sắp xếp.</li>
+            <li>Được áp dụng trong các bài toán tìm vị trí đầu tiên, tìm vị trí cuối cùng, đếm số lần xuất hiện của các
+                phần tử trong mảng.</li>
+        </ul>
+        <p>
+            Ví dụ: Nếu trong danh sách 1 3 4 5 6 có 5 phần tử mà ta cần tìm 4 thì nó sẽ duyệt 1->3->4 đến khi
+            thấy 4 trả về true còn duyệt hết mà không thấy trả về false.
+        </p>
+        <h3>b. Thực hành</h3>
+        <h4 class="incenter">Ngôn Ngữ: C++</h4>
+        <div class="box-terminal">
+            <pre><code class="language-cpp">
+#include &lt;iostream&gt; 
+#include &lt;vector&gt;
+using namespace std;
+
+bool linear_search(vector&lt;long long&gt; &a, long long x)
+{
+	for(int i = 0; i &lt; a.size(); i++)
+	{
+     if(a[i] == x)
+	 {
+		return true;
+	 }
+	}
+	return false;
+}
+
+int main()
+{
+	// Code tăng tốc 
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	//------End-------//
+	long long n, x; 
+	cin >> n >> x; 
+	vector&lt;long long&gt; a(n); 
+	for(int i = 0; i &lt; n; i++)
+	{
+		cin >> a[i];
+	} 
+	if(linear_search(a, x) == true) // if(linear_search(a, x)) đều đúng
+	{
+		cout &lt;&lt; "Co ton tai!" &lt;&lt; endl;
+	}
+	else {
+		cout &lt;&lt; "Khong ton tai!" &lt;&lt; endl;
+	}
+	return 0;
+}
+    </code></pre>
+        </div>
+    </div>
+
+    <div class="white">
+        <h2 class="bold_text">2. Binary Search</h2>
+        <h3 class="bold_text">a. Khái niệm</h3>
+        <p>
+        - Thuật toán tìm kiếm nhị phân (Binary Search) là thuật toán mà trong đó nó tìm kiếm từ đoạn left->right của mảng,
+        ở mỗi bước của thuật toán nó sẽ tìm vị trí gốc là giữa (gọi là mid/pivot) và so sánh với phần tử cần tìm
+        trong bước đó. Nếu phần tử cần tìm kiếm bằng phần tử tại vị trí giữa thuật toán sẽ trả về true,
+        nếu không tuỳ phần tử lớn hơn vị trí giữa hay bé hơn vị trí giữa mà ta lược đi đoạn đó (không phải
+        xoá khỏi mảng) tức là không tìm kiếm nữa - sau tất cả bước lặp mà không tìm thấy phần tử thoả mãn
+        thì thuật toán trả về false sau khi kết thúc vòng lặp do (left&lt;=right).
+        </p>
+        <p>
+            - Đặc điểm của Binary Search:
+        </p>
+        <ul>
+        <li>Sắp xếp nhanh hơn Linear Search với trường hợp mảng ĐÃ SẮP XẾP.</li>
+        <li>Chỉ HOẠT ĐỘNG ĐƯỢC với mảng ĐÃ SẮP XẾP.</li>
+        <li>Không nên Sắp Xếp lại mảng sau đó dùng Binary Search thay vì dùng Linear Search (Nhanh hơn nhiều).</li>
+        <li>Được ứng dụng vào các bài toán như Linear Search nhưng với điều kiện mảng phải được sắp xếp sẵn.</li>
+        <li>Right = Pivot - 1 lấy mảng nhỏ, Left = Pivot + 1 lấy mảng lớn.</li>
+        </ul>
+        <p>
+            - Các bước hoạt động của Binary Search:
+        </p>
+        <ol>
+            <li>Bắt đầu vòng lặp Left &lt;= Right.</li>
+            <li>Chọn phần tử ngay giữa.</li>
+            <li>Nếu phần tử giữa thoả mãn phần tử cần tìm trả về true và kết thúc hàm.</li>
+            <li>Nếu phần tử giữa &gt; pivot thì lược đi bên phải bằng pivot - 1, dịch bên phải ra sau pivot tức là thành mảng "nhỏ hơn pivot và chứa phần tử cần tìm" sau khi lược nhưng các phần tử bị lược không bị xoá ra khỏi mảng.</li>
+            <li>Nếu phần tử giữa &lt; pivot thì lược đi bên phải bằng pivot + 1, dịch bên trái ra sau pivot tức là thành mảng "lớn hơn pivot và chứa phần tử cần tìm" sau khi lược nhưng các phần tử bị lược không bị xoá ra khỏi mảng.</li>
+            <li>Sau khi vòng lặp kết thúc mà vẫn không tìm thấy thì kết thúc vòng lặp ngay và "return false" tức là không tìm thấy phần tử vì cả vòng lặp không tìm thấy.</li>
+        </ol>
+        <h3>b. Thực hành</h3>
+        <h4 class="incenter">Ngôn Ngữ: C++</h4>
+        <div class="box-terminal">
+            <pre><code class="language-cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+using namespace std;
+
+bool binary_search(vector&lt;long long&gt; &a, long long left, long long right, long long x)
+{
+	while(left &lt;= right)
+	{
+		long long pivot = left + ((right - left) / 2); // Khoảng cách + phần tử đầu = khoảng cách thực
+		if(a[pivot] == x) {
+			return true;
+		}
+		else if(a[pivot] &gt; x) {
+			right = pivot - 1;
+		}
+		else {
+                        left = pivot + 1;
+		}
+	}
+	return false;
+}
+
+int main()
+{
+	// Code tăng tốc 
+	ios_base::sync_with_stdio(false);
+	cin.tie(nullptr);
+	//------End-------//
+	long long n, x; 
+	cin >> n >> x; 
+	vector&lt;long long&gt; a(n); 
+	for(int i = 0; i &lt; n; i++)
+	{
+		cin >> a[i];
+	} 
+	sort(a.begin(), a.end()); // Binary search chỉ hoạt động với mảng sắp xếp
+	if(binary_search(a, 0, n - 1, x) == true) // if(binary_search(a, 0, n - 1, x)) đều đúng
+	{
+		cout &lt;&lt; "Co ton tai!" &lt;&lt; endl;
+	}
+	else {
+		cout &lt;&lt; "Khong ton tai!" &lt;&lt; endl;
+	}
+	return 0;
+}
+    </code></pre>
+        </div>
+    </div>
+    <br />
+<footer>
+    <h2 class='incenter' style="font-size:20px; color: #FFFFFF;">Hãy gửi email đến nhóm tôi nếu bạn phát hiện có sai sót thuật toán, Trân Trọng.</h2>
+    <div id="My_Email" class="myEmail"></div>
+    <script src="/script/email.js"></script>
+</footer>
+
+</body>
+<script>hljs.highlightAll();</script>
+
+</html>

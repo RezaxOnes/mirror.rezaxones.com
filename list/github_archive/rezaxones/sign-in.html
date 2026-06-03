@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+
+<head>
+  <title>Sign In</title>
+  <meta charset="UTF-8" />
+  <link href="https://rezaxones.com/style/sign-in.css" rel='stylesheet' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://rezaxones.com/storage/rezaxones_icon.png" rel="icon" type="image/png" />
+  <!--Open Graph-->
+  <meta property="og:url" content="https://rezaxones.com" />
+  <meta property="og:title" content="RezaxOnes" />
+  <meta property="og:description" content="Trang chủ của website rezaxones.com" />
+  <meta property="og:image" content="https://rezaxones.com/storage/rezaxones_image.png" />
+  <!---->
+</head>
+
+<body>
+  <h1> Sign In </h1>
+  <br />
+  <form id="signInForm" autocomplete="off">
+    <label for=username>Username</label>
+    <br />
+    <input type="text" id="username" name="username" />
+    <br />
+    <label for="password">Password</label>
+    <br />
+    <div class="password-box">
+    <input type="password" id="password" name="password" />
+    <span id="togglePass2"><i class="fa-solid fa-eye"></i></span>
+    </div>
+    <br /><br />
+    <input type="submit" value="Sign In" />
+    <br /><br />
+  </form>
+  <script src="https://rezaxones.com/script/signInLogic.js"></script>
+</body>
+
+</html>

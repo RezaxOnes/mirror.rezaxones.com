@@ -1,0 +1,11 @@
+[Unit]
+Description=Check battery level
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/battery-shutdownAT.sh
+User=root
+
+[Install]
+WantedBy=multi-user.target

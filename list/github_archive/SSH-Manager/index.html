@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>SSH Monitor</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://sshmon.rezaxones.com/storage/rezaxones_icon.png" rel="icon" type="image/png" />
+    <!--Open Graph-->
+    <meta property="og:url" content="https://rezaxones.com" />
+    <meta property="og:title" content="RezaxOnes" />
+    <meta property="og:description" content="Trang chủ của website rezaxones.com" />
+    <meta property="og:image" content="https://rezaxones.com/storage/rezaxones_image.png" />
+    <!---->
+    <!--API-->
+    <link href="https://sshmon.rezaxones.com/style/main.css" rel='stylesheet' />
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!---->
+</head>
+
+<body>
+<div class ="incenter">
+<h1> RezaxOnes - Server 1 (Web Mirror) - Ubuntu 24.04.3 LTS
+<img src="https://sshmon.rezaxones.com/storage/rezaxones_icon-black.jpg" alt="tick" width="25" height="25" />
+</h1>
+<h1>Bảng quản lý tình trạng ssh</h1>
+<div class="box-2">
+<h2>Địa Chỉ IP LocalHost:</h2>
+<h3 id="localhost"></h3>
+<h2>Địa Chỉ IP LAN (Dùng để remote SSH):</h2>
+<h3 class="lan_ip"></h3>
+<h2>Public IP (Đã bị chặn => Không thể remote):</h2>
+<h3 class="publicIP"></h3>
+<h2>Tên card mạng hiện tại Server đang dùng:</h2>
+<h3 class="lan_cardwifi"></h3>
+<h2>Cổng SSH đang lắng nghe:</h2>
+<h3 class="Port"></h3>
+<h2>Tình trạng SSH hiện tại:</h2>
+<h3 class="isConnect"></h3>
+</div>
+</div>
+<h2 class="incenter">
+  SSH hiện đang chạy trên 
+  <strong>IP:</strong> <span class="lan_ip"></span>, 
+  <strong>Port:</strong> <span class="Port"></span>
+</h2>
+<footer>
+  <p class="incenter" style="color: #e30000"># Xin Lưu Ý: Server này chỉ có thể dùng SSH (Secure Shell) trong LAN hay LocalHost ở nơi đặt Server (Máy Chủ), không thể dùng Remote (Điều Khiển) SSH chủ động từ ngoài mạng! - Mục đích của web monitor này là thuận tiện trong quản lý máy chủ, máy chủ này đã được Isolated (Cách Ly)</p>
+  <p class="incenter" style="color: #e30000"> Hay Nói đúng hơn là đã chặn SSH từ ngoài mạng, mọi nỗ lực dùng SSH đăng nhập khác mạng LAN với nơi đặt máy chủ đều vô nghĩa</p>
+</footer>
+<script src="https://sshmon.rezaxones.com/web-socket-conf.js"></script>
+</body>
+
+</html>
